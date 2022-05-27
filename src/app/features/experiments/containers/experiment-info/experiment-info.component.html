@@ -33,6 +33,9 @@
     <span [routerLink]="['info-output']" [routerLinkActive]="'disabled'" queryParamsHandling="preserve">
       <sm-navbar-item header="results" [active]="routerConfig.includes('info-output')"></sm-navbar-item>
     </span>
+    <span [routerLink]="['info-output']" [routerLinkActive]="'disabled'" queryParamsHandling="preserve">
+      <sm-navbar-item header="holaaaa" [active]="routerConfig.includes('info-output')"></sm-navbar-item>
+    </span>
   </nav>
   <div class="experiment-info-body" #scrollContainer>
     <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
