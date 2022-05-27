@@ -1,0 +1,81 @@
+@import "../../../../webapp-common/shared/ui-components/styles/variables";
+
+:host {
+  .worker-info-container {
+    padding: 12px 0;
+  }
+
+  ::ng-deep .table-row {
+    background-color: $blue-800 !important;
+    border-bottom: 1px solid $dark-border;
+    padding: 0 !important;
+    height: 40px;
+    display: flex;
+    &:last-of-type {border-bottom-color: $dark-border !important;}
+  }
+
+  ::ng-deep {
+    .row {
+      width: 100%;
+      line-height: normal !important;
+    }
+    [class^='col'] {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .row.headers {
+      height: 38px;
+      align-items: center;
+      line-height: normal !important;
+      border-bottom: 1px solid $dark-border !important;
+      color: $blue-400;
+    }
+  } 
+
+  //.queues-table-container {
+  //  padding: 0 20px;
+  //}
+
+  .tabs-container {
+    position: relative;
+    background-color: $blue-800;
+    border-bottom: 1px solid $dark-border;
+    margin: 12px 0 0 0;
+    height: 38px;
+
+    ::ng-deep .navbar-item {
+      height: 100%;
+      padding: 0 15px;
+      margin: 0 1px;
+    }
+  }
+
+  .pull-right {
+    position: absolute;
+    right: 24px;
+    top: 0;
+  }
+
+  .id-cell {
+    .value {
+      flex: 1;
+    }
+
+    .copy-btn {
+      min-width: 30px;
+      margin-left: 5px;
+      visibility: hidden;
+
+      ::ng-deep .btn {
+        padding: 0;
+      }
+    }
+
+    &:hover {
+      .copy-btn {
+        visibility: visible;
+      }
+    }
+  }
+}
