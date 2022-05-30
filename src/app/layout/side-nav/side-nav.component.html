@@ -39,32 +39,21 @@
       </div>
       <div class="caption">workers & queues</div>
     </a>
+    <a class="item d-block"
+    *smCheckPermission="true"
+    routerLink="/workers-and-queues"
+    routerLinkActive
+    #rlaQueues="routerLinkActive"
+    smTooltip="WORKERS & QUEUES"
+    showDelay="0"
+    matTooltipPosition="right">
+   <div class="item-icon">
+     <i [class]="'al-icon al-ico-queues al-color ' + (rlaQueues.isActive ? 'neon-yellow': 'blue-300')" ></i>
+   </div>
+   <div class="caption">workers & queues</div>
+ </a>
 
 
-  <a class="item d-block" smTooltip="" showDelay="0" matTooltipPosition="right" routerLink="">
-      <div class="item-icon">
-        <fa-icon [icon]="faThList" [class]="'al-icon al-color '" ></fa-icon>
-      </div>
-      <div class="caption">version control</div>
-    </a>
-    <a class="item d-block" smTooltip="" showDelay="0" matTooltipPosition="right" routerLink="">
-      <div class="item-icon">
-        <fa-icon [icon]="faDatabase" [class]="'al-icon al-color '"></fa-icon>
-      </div>
-      <div class="caption">cloud</div>
-    </a>
-    <a class="item d-block" smTooltip="" showDelay="0" matTooltipPosition="right" routerLink="">
-      <div class="item-icon">
-        <fa-icon [icon]="faCodeBranch" [class]="'al-icon al-color '" ></fa-icon>
-      </div>
-      <div class="caption">comparison</div>
-    </a>
-    <a class="item d-block" smTooltip="" showDelay="0" matTooltipPosition="right" href="https://github.com/allegroai/clearml" target="_blank">
-      <div class="item-icon">
-        <fa-icon [icon]="faFileExcel" [class]="'al-icon al-color '" ></fa-icon>
-      </div>
-      <div class="caption">comparison</div>
-    </a> 
 
   </ng-container>
   <div *ngIf="currentUser" class="account">
